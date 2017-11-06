@@ -5,7 +5,7 @@ int main()
 {
 	Network net(12500);
 	
-	cout<<"Simulation of the network :"<<endl<<endl;	
+	cout<<"Simulations of the network :"<<endl<<endl;	
 
 	net.connection_for_12500_neurons();	
 	net.update_network(12.0);
