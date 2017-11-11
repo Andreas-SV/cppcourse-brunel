@@ -14,35 +14,37 @@ using namespace std;
 /* Because Neuron.h is the pillar of the project, all the following constants are stored in this file
  */
 
-const double V_thr= 20.0;		//potential threshold at which a neuron produce a spike (in mV)
-const double V_res= 0.0;		//membrane potential after exceeding the threshold (in mV)
+const double V_thr= 20.0;				//potential threshold at which a neuron produce a spike (in mV)
+const double V_res= 0.0;				//membrane potential after exceeding the threshold (in mV)
 
-const double I_ext = 0.0;		//external current (in pA)
-const double tau = 20.0;		//time constant (in ms)
-const double R = 20.0;			//resistance of (in GΩ)
-const double C = 1.0;			//capacitance (in pF)		
-const double t_refr = 2.0;		//duration in which the neuron is refractory (in ms)
-const double h = 0.1;			//time step (1 step equals to 0.1ms)
+const double I_ext = 0.0;				//external current (in pA)
+const double tau = 20.0;				//time constant (in ms)
+const double R = 20.0;					//resistance of (in GΩ)
+const double C = 1.0;					//capacitance (in pF)		
+const double t_refr = 2.0;				//duration in which the neuron is refractory (in ms)
+const double h = 0.1;					//time step (1 step equals to 0.1ms)
 
-const int N_E = 10000;			//number of excitatory neurons for the simulation								
-const int N_I = 2500;			//number of inhibitory neurons
-const double C_E = 0.1*N_E;		//number of excitatory connections for the simulation
-const double C_I = 0.1*N_I;		//number of inhibitory connections
-const double J = 0.1;			//spike response amplitude (in mV)
-const double J_E = J;			//amplitude for excitatory neurons (in mV)
-const double g = 5.0;			//ratio of J_I/J_E with J_I = amplitude for inhibitory neurons
-const double D = 1.5;			//time delay in which a spike from a neuron is transmitted to another neuron (in ms)
-const double nu_ext = 20.0;		//rate of external fire for a neuron (in /ms)
+const int N_E = 10000;					//number of excitatory neurons for the simulation								
+const int N_I = 2500;					//number of inhibitory neurons
+const double C_E = 0.1*N_E;				//number of excitatory connections for the simulation
+const double C_I = 0.1*N_I;				//number of inhibitory connections
+const double J = 0.1;					//spike response amplitude (in mV)
+const double J_E = J;					//amplitude for excitatory neurons (in mV)
+const double g = 5.0;					//ratio of J_I/J_E with J_I = amplitude for inhibitory neurons
+const double D = 1.5;					//time delay in which a spike from a neuron is transmitted to another neuron (in ms)
+const double eta = 2;					//ratio of nu_ext/nu_thr with nu_thr = number of spikes per second needed to reach threshold
+const double nu_ext = eta*V_thr/(J*tau);//rate of external fire for a neuron (in /ms)
 
 
 class Neuron
-{	
-/* class Neuron:
- *
- * Simulate a neuron.
- * The neuron can be updated in time steps, can connect to another neuron, 
- * and receive a spike from another neuron.
- */	
+{
+		
+   /* class Neuron:
+	*
+	* Simulate a neuron.
+	* The neuron can be updated in time steps, can connect to another neuron, 
+	* and receive a spike from another neuron.
+	*/	
 	private:
 	
 	double V_mem;				//membrane potential of the neuron	

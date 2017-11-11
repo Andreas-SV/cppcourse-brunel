@@ -78,7 +78,7 @@ void Network::update_network(const double& dt)
 				
 				for(size_t j(0);j<neurons[i].get_targets().size();++j)
 				{	
-					assert(neurons[i].get_targets()[j]<get_neurons().size() and neurons[i].get_targets()[j]>=0);
+					assert(neurons[i].get_targets()[j]<nb_neurons and neurons[i].get_targets()[j]>=0);
 					neurons[neurons[i].get_targets()[j]].receive_spike(t,neurons[i].get_weight());
 					//we make sure that the target index is between 0 and the nb of neurons-1 
 				}					
