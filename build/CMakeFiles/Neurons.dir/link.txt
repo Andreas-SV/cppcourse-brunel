@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11   CMakeFiles/Neurons.dir/Neuron.cpp.o CMakeFiles/Neurons.dir/Network.cpp.o CMakeFiles/Neurons.dir/main.cpp.o  -o Neurons -rdynamic 

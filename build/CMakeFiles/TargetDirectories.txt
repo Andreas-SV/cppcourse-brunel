@@ -1,0 +1,5 @@
+/home/student/projects/cppcourse-brunel/build/CMakeFiles/Neurons_unittests.dir
+/home/student/projects/cppcourse-brunel/build/CMakeFiles/doc.dir
+/home/student/projects/cppcourse-brunel/build/gtest/CMakeFiles/gtest.dir
+/home/student/projects/cppcourse-brunel/build/CMakeFiles/Neurons.dir
+/home/student/projects/cppcourse-brunel/build/gtest/CMakeFiles/gtest_main.dir

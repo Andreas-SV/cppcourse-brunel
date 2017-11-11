@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++11   CMakeFiles/Neurons_unittests.dir/Neuron.cpp.o CMakeFiles/Neurons_unittests.dir/Network.cpp.o CMakeFiles/Neurons_unittests.dir/Neurons_unittests.cpp.o  -o Neurons_unittests -rdynamic gtest/libgtest.a gtest/libgtest_main.a gtest/libgtest.a -pthread 

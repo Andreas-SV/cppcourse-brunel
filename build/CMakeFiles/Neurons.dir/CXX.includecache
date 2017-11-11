@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/student/projects/cppcourse-brunel/Network.cpp
+Neuron.h
+/home/student/projects/cppcourse-brunel/Neuron.h
+Network.h
+/home/student/projects/cppcourse-brunel/Network.h
+
+/home/student/projects/cppcourse-brunel/Network.h
+Neuron.h
+/home/student/projects/cppcourse-brunel/Neuron.h
+
+/home/student/projects/cppcourse-brunel/Neuron.cpp
+Neuron.h
+/home/student/projects/cppcourse-brunel/Neuron.h
+
+/home/student/projects/cppcourse-brunel/Neuron.h
+iostream
+-
+fstream
+-
+cmath
+-
+vector
+-
+string
+-
+random
+-
+cassert
+-
+
+/home/student/projects/cppcourse-brunel/main.cpp
+Neuron.h
+/home/student/projects/cppcourse-brunel/Neuron.h
+Network.h
+/home/student/projects/cppcourse-brunel/Network.h
+
